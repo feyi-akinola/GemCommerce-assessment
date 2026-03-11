@@ -23,7 +23,7 @@
               <div class="feature-avatar" style="height: 60px; width: 60px; display: flex; align-items: center; justify-content: center; padding: 12px; background-color: #DCF9CA; border-radius: 2000px;">
                 <img src="./images/svg/food.svg" alt="Real Food" style="height: 36px; width: 36px;">
               </div>
-  
+              
               <div class="feature-detail" style="display: flex; flex-direction: column; gap: 8px;">
                 <p class="description-text" style="font-weight: 600; font-size: 19px; width: 100%; color: var(--title-text-color);">
                   Real Food
@@ -49,8 +49,22 @@
               </div>
             </div>
           </div>
-
-          <img src="./images/raw.png" alt="Raw food" class="mask-image" style="width: 370px; height: 370px;">
+          
+          <div class="slider-container" style="width: 370px; height: 370px; border-radius: 2000px; position: relative; overflow: hidden; user-select: none;">
+            
+            <img src="./images/raw.png" alt="Processed food" style="width: 370px; height: 370px; display: block; rotate: 180deg;">
+            
+            <div class="reveal-div" style="position: absolute; top: 0; left: 50%; right: 0; height: 100%; overflow: hidden;">
+              <img src="./images/processed.png" alt="Raw food" style="position: absolute; top: 0; right: 0; width: 370px; height: 370px; rotate: 180deg;">
+            </div>
+            
+            <div class="slider-line" style="position: absolute; top: 0; left: 50%; width: 0px; height: 100%; border: 2px solid var(--accent-color); transform: translateX(-50%); cursor: col-resize;">
+              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 22px; height: 22px; background: var(--background-color); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <img src="./images/svg/left-arrow.svg" alt="Left Arrow" style="height: 6px; width: 6px;">
+                <img src="./images/svg/right-arrow.svg" alt="Right Arrow" style="height: 6px; width: 6px;">
+              </div>
+            </div>
+          </div>
 
           <div class="feature-group">
             <div class="feature" style="display: flex; gap: 24px; width: 370px;">
@@ -196,3 +210,50 @@
     </section>
   </body>
 </html>
+
+<script>
+  (function () {
+    const container = document.querySelector('.slider-container');
+    const revealDiv = container.querySelector('.reveal-div');
+    const sliderLine = container.querySelector('.slider-line');
+    let dragging = false;
+  
+    function setPosition(clientX) {
+      const rect = container.getBoundingClientRect();
+      let pct = (clientX - rect.left) / rect.width;
+      pct = Math.max(0, Math.min(1, pct));
+      const leftPct = pct * 100;
+      sliderLine.style.left = leftPct + '%';
+      revealDiv.style.left = leftPct + '%';
+    }
+  
+    // Only start drag from the slider handle
+    sliderLine.addEventListener('mousedown', e => {
+      dragging = true;
+      e.preventDefault();
+    });
+  
+    window.addEventListener('mousemove', e => {
+      if (!dragging) return;
+      setPosition(e.clientX);
+    });
+  
+    window.addEventListener('mouseup', () => {
+      dragging = false;
+    });
+  
+    // Touch support
+    sliderLine.addEventListener('touchstart', e => {
+      dragging = true;
+    }, { passive: true });
+  
+    window.addEventListener('touchmove', e => {
+      if (!dragging) return;
+      setPosition(e.touches[0].clientX);
+    }, { passive: true });
+  
+    window.addEventListener('touchend', () => {
+      dragging = false;
+    });
+  })();
+</script>
