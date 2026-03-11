@@ -15,7 +15,8 @@
 
 html {
   background-color: var(--background-color);
-  font-family: Inter Tight;
+  font-family: "Inter Tight", sans-serif;
+  -webkit-font-smoothing: antialiased
 }
 
 body {
@@ -68,9 +69,7 @@ body {
 .title-text {
   width: 538px;
   font-weight: 600;
-  font-style: SemiBold;
   font-size: 40px;
-  leading-trim: NONE;
   line-height: 120%;
   letter-spacing: 0.25px;
   color: var(--title-text-color);
@@ -78,9 +77,7 @@ body {
 
 .percentage-text {
   font-weight: 700;
-  font-style: Bold;
   font-size: 33px;
-  leading-trim: NONE;
   line-height: 150%;
   letter-spacing: 0.25px;
   color: var(--accent-color);
@@ -89,9 +86,7 @@ body {
 .description-text {
   width: 538px;
   font-weight: 400;
-  font-style: Regular;
   font-size: 16px;
-  leading-trim: NONE;
   line-height: 150%;
   letter-spacing: 0.5px;
   color: var(--description-text-color);
@@ -99,9 +94,7 @@ body {
 
 .button-text {
   font-weight: 600;
-  font-style: SemiBold;
   font-size: 16px;
-  leading-trim: NONE;
   line-height: 150%;
   letter-spacing: 0.5px;
   color: var(--background-color);
@@ -110,9 +103,7 @@ body {
 .key-points-title {
   margin-bottom: 16px;
   font-weight: 600;
-  font-style: SemiBold;
   font-size: 19px;
-  leading-trim: NONE;
   line-height: 150%;
   letter-spacing: 0.5px;
   color: var(--title-text-color);
@@ -125,9 +116,8 @@ body {
 }
 
 .divider {
-  width: 538;
+  width: 538px;
   height: 0px;
-  angle: 0 deg;
   opacity: 1;
   border: 1px solid var(--divider-color);
 }
