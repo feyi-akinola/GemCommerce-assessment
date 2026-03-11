@@ -15,6 +15,7 @@
 
 html {
   background-color: var(--background-color);
+  font-family: Inter Tight;
 }
 
 body {
@@ -67,7 +68,6 @@ body {
 
 .title-text {
   width: 538px;
-  font-family: Inter Tight;
   font-weight: 600;
   font-style: SemiBold;
   font-size: 40px;
@@ -78,7 +78,6 @@ body {
 }
 
 .percentage-text {
-  font-family: Inter Tight;
   font-weight: 700;
   font-style: Bold;
   font-size: 33px;
@@ -90,7 +89,6 @@ body {
 
 .description-text {
   width: 538px;
-  font-family: Inter Tight;
   font-weight: 400;
   font-style: Regular;
   font-size: 16px;
@@ -101,7 +99,6 @@ body {
 }
 
 .button-text {
-  font-family: Inter Tight;
   font-weight: 600;
   font-style: SemiBold;
   font-size: 16px;
@@ -113,7 +110,6 @@ body {
 
 .key-points-title {
   margin-bottom: 16px;
-  font-family: Inter Tight;
   font-weight: 600;
   font-style: SemiBold;
   font-size: 19px;
@@ -158,4 +154,10 @@ body {
   height: 24px;
   width: 39.2px;
   object-fit: contain;
+}
+
+.feature-group {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
 }
