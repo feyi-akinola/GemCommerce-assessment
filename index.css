@@ -1,0 +1,161 @@
+:root {
+  --background-color: #FFFFFF;
+  --title-text-color: #161723;
+  --description-text-color: #424153;
+  --accent-color: #EE6F4B;
+  --divider-color: #E3E3E8;
+  --background-color-grey: #F8F8F8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--background-color);
+}
+
+body {
+  width: 1920px;
+  margin: auto;
+}
+
+.section {
+  padding: 80px 0px;
+  width: 100%;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-section h1 {
+  height: 536px;
+}
+
+.text-container {
+  width: 570px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.section-part {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  align-items: center;
+}
+
+.container-1 {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 30px;
+}
+
+.title-text {
+  width: 538px;
+  font-family: Inter Tight;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 40px;
+  leading-trim: NONE;
+  line-height: 120%;
+  letter-spacing: 0.25px;
+  color: var(--title-text-color);
+}
+
+.percentage-text {
+  font-family: Inter Tight;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 33px;
+  leading-trim: NONE;
+  line-height: 150%;
+  letter-spacing: 0.25px;
+  color: var(--accent-color);
+}
+
+.description-text {
+  width: 538px;
+  font-family: Inter Tight;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  leading-trim: NONE;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  color: var(--description-text-color);
+}
+
+.button-text {
+  font-family: Inter Tight;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 16px;
+  leading-trim: NONE;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  color: var(--background-color);
+}
+
+.key-points-title {
+  margin-bottom: 16px;
+  font-family: Inter Tight;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 19px;
+  leading-trim: NONE;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  color: var(--title-text-color);
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.divider {
+  width: 538;
+  height: 0px;
+  angle: 0 deg;
+  opacity: 1;
+  border: 1px solid var(--divider-color);
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--accent-color);
+  border-radius: 6px;
+  padding: 12px 40px;
+}
+
+.image {
+  width: 570px;
+  height: 480px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.payment-option {
+  height: 24px;
+  width: 39.2px;
+  object-fit: contain;
+}
