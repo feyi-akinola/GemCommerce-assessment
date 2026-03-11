@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Happy Dog Bites</title>
     <link rel="stylesheet" href="./index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,85 +13,84 @@
   <body>
     <section class="section">
       <div class="hero">
-        <h1 class="title-text" style="width: 536px; text-align: center">
+        <h1 class="title-text title-text--centered">
           What makes us different makes them stronger
         </h1>
   
-        <div class="features" style="display: flex; align-items: center; justify-content: center; gap: 30px;">
+        <div class="hero__features">
           <div class="feature-group">
-            <div class="feature" style="display: flex; gap: 24px; width: 370px;">
-              <div class="feature-avatar" style="height: 60px; width: 60px; display: flex; align-items: center; justify-content: center; padding: 12px; background-color: #DCF9CA; border-radius: 2000px;">
-                <img src="./images/svg/food.svg" alt="Real Food" style="height: 36px; width: 36px;">
+            <div class="feature">
+              <div class="feature__icon feature__icon--green">
+                <img src="./images/svg/food.svg" alt="">
               </div>
               
-              <div class="feature-detail" style="display: flex; flex-direction: column; gap: 8px;">
-                <p class="description-text" style="font-weight: 600; font-size: 19px; width: 100%; color: var(--title-text-color);">
+              <div class="feature__body">
+                <p class="feature__heading">
                   Real Food
                 </p>
-                <p class="description-text" style="width: 100%;">
+                <p class="description-text description-text--contain">
                   Wholesome recipes for dogs with real meat and veggies.
                 </p>
               </div>
             </div>
 
-            <div class="feature" style="display: flex; gap: 24px; width: 370px;">
-              <div class="feature-avatar" style="height: 60px; width: 60px; display: flex; align-items: center; justify-content: center; padding: 12px; background-color: #F8F0D6; border-radius: 2000px;">
-                <img src="./images/svg/ingredient.svg" alt="Premium Ingredient" style="height: 36px; width: 36px;">
+            <div class="feature">
+              <div class="feature__icon feature__icon--yellow">
+                <img src="./images/svg/ingredient.svg" alt="">
               </div>
   
-              <div class="feature-detail" style="display: flex; flex-direction: column; gap: 8px;">
-                <p class="description-text" style="font-weight: 600; font-size: 19px; width: 100%; color: var(--title-text-color);">
+              <div class="feature__body">
+                <p class="feature__heading">
                   Premium Ingredient
                 </p>
-                <p class="description-text" style="width: 100%;">
+                <p class="description-text description-text--contain">
                   Elevating pet care with unmatched safety and quality.
                 </p>
               </div>
             </div>
           </div>
           
-          <div class="slider-container" style="width: 370px; height: 370px; border-radius: 2000px; position: relative; overflow: hidden; user-select: none;">
+          <div class="slider">
+            <img src="./images/raw.png" alt="Processed food" class="slider-image slider-image--block">
             
-            <img src="./images/raw.png" alt="Processed food" style="width: 370px; height: 370px; display: block; rotate: 180deg;">
-            
-            <div class="reveal-div" style="position: absolute; top: 0; left: 50%; right: 0; height: 100%; overflow: hidden;">
-              <img src="./images/processed.png" alt="Raw food" style="position: absolute; top: 0; right: 0; width: 370px; height: 370px; rotate: 180deg;">
+            <div class="reveal-div">
+              <img src="./images/processed.png" alt="Raw food" class="slider-image slider-image--positioned">
             </div>
             
-            <div class="slider-line" style="position: absolute; top: 0; left: 50%; width: 0px; height: 100%; border: 2px solid var(--accent-color); transform: translateX(-50%); cursor: col-resize;">
-              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 22px; height: 22px; background: var(--background-color); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                <img src="./images/svg/left-arrow.svg" alt="Left Arrow" style="height: 6px; width: 6px;">
-                <img src="./images/svg/right-arrow.svg" alt="Right Arrow" style="height: 6px; width: 6px;">
+            <div class="slider__line">
+              <div class="slider__handle">
+                <img src="./images/svg/left-arrow.svg" alt="Left Arrow">
+                <img src="./images/svg/right-arrow.svg" alt="Right Arrow">
               </div>
             </div>
           </div>
 
           <div class="feature-group">
-            <div class="feature" style="display: flex; gap: 24px; width: 370px;">
-              <div class="feature-avatar" style="height: 60px; width: 60px; display: flex; align-items: center; justify-content: center; padding: 12px; background-color: #C8F2E7; border-radius: 2000px;">
-                <img src="./images/svg/fresh.svg" alt="Made Fresh" style="height: 36px; width: 36px;">
+            <div class="feature">
+              <div class="feature__icon feature__icon--teal">
+                <img src="./images/svg/fresh.svg" alt="">
               </div>
   
-              <div class="feature-detail" style="display: flex; flex-direction: column; gap: 8px;">
-                <p class="description-text" style="font-weight: 600; font-size: 19px; width: 100%; color: var(--title-text-color);">
+              <div class="feature__body">
+                <p class="feature__heading">
                   Made Fresh
                 </p>
-                <p class="description-text" style="width: 100%;">
+                <p class="description-text description-text--contain">
                   We prioritize maintaining the integrity of whole foods and nutrition.
                 </p>
               </div>
             </div>
 
-            <div class="feature" style="display: flex; gap: 24px; width: 370px;">
-              <div class="feature-avatar" style="height: 60px; width: 60px; display: flex; align-items: center; justify-content: center; padding: 12px; background-color: #F7CABD; border-radius: 2000px;">
-                <img src="./images/svg/vet.svg" alt="Vet Developed" style="height: 36px; width: 36px;">
+            <div class="feature">
+              <div class="feature__icon feature__icon--peach">
+                <img src="./images/svg/vet.svg" alt="">
               </div>
   
-              <div class="feature-detail" style="display: flex; flex-direction: column; gap: 8px;">
-                <p class="description-text" style="font-weight: 600; font-size: 19px; width: 100%; color: var(--title-text-color);">
+              <div class="feature__body">
+                <p class="feature__heading">
                   Vet Developed
                 </p>
-                <p class="description-text" style="width: 100%;">
+                <p class="description-text description-text--contain">
                   We raise the bar for dog nutrition, surpassing industry expectations.
                 </p>
               </div>
@@ -99,34 +98,48 @@
           </div>
         </div>
 
-        <div class="payment" style="width: 462px; display: flex; flex-direction: column; gap: 16px;">
+        <div class="hero__cta">
           <a href="#" class="button">
-            <span class="button-text">
+            <span class="button__text">
               Get your dog's healthy meal today!
             </span>
           </a>
 
-          <div class="payment-details" style="width: 100%; display: flex; align-items: center; justify-content: space-between;">
-            <div class="guarantee" style="display: flex; align-items: center; gap: 8px;">
-              <img src="./images/svg/shield-check.svg" alt="Shield Check" style="height: 16px; width: 16px;">
-              <p class="description-text" style="font-size: 13px !important; width: auto !important;">30-day money back guarantee</p>
+          <div class="payment">
+            <div class="payment__guarantee">
+              <img src="./images/svg/shield-check.svg">
+              <p class="description-text description-text--sm">30-day money back guarantee</p>
             </div>
 
-            <div class="payment-options" style="display: flex; gap: 8px;">
-              <img src="./images/payment-options/paypal.png" alt="PayPal" class="payment-option">
-              <img src="./images/payment-options/visa.png" alt="Visa" class="payment-option">
-              <img src="./images/payment-options/mastercard.png" alt="MasterCard" class="payment-option">
-              <img src="./images/payment-options/apple-pay.png" alt="Apple Pay" class="payment-option">
-              <img src="./images/payment-options/google-pay.png" alt="Google Pay" class="payment-option">
-            </div>
+            <ul class="payment__list">
+              <li class="payment__item">
+                <img src="./images/payment-options/paypal.png" alt="PayPal">
+              </li>
+
+              <li class="payment__item">
+                <img src="./images/payment-options/visa.png" alt="Visa">
+              </li>
+
+              <li class="payment__item">
+                <img src="./images/payment-options/mastercard.png" alt="MasterCard">
+              </li>
+
+              <li class="payment__item">
+                <img src="./images/payment-options/apple-pay.png" alt="Apple Pay">
+              </li>
+
+              <li class="payment__item">
+                <img src="./images/payment-options/google-pay.png" alt="Google Pay">
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
     
-    <section class="section section-part" style="margin-top: 40px; background-color: var(--background-color-grey);">
-      <div class="container-1" style="gap: 62px !important;">
-        <div class="info-list" style="width: 538px !important;">
+    <section class="section section--muted section--flex">
+      <div class="container container--wide">
+        <div class="stats">
           <div class="text-container">
             <h2 class="title-text">
               Nutrition is the foundation for longer, healthier lives in dogs.
@@ -136,56 +149,56 @@
             </p>
           </div>
 
-          <div class="key-points" style="">
-            <p class="key-points-title">Key points:</p>
+          <div class="key-points">
+            <p class="key-points__label">Key points:</p>
 
-            <div class="points">
-              <div class="point" style="display: flex; justify-content: space-between; align-items: center;">
+            <ul class="key-points__list">
+              <li class="key-points__item">
                 <p class="percentage-text">97%</p>
 
-                <p class="description-text" style="width: 423px !important;">
+                <p class="description-text description-text--compact">
                   Dogs choose our dog food over leading brands because of its real functional ingredients and delicious flavor.
                 </p>
-              </div>
+              </li>
 
-              <div class="divider"></div>
+              <li class="divider"></li>
               
-              <div class="point" style="display: flex; justify-content: space-between; align-items: center;">
+              <li class="key-points__item">
                 <p class="percentage-text">84%</p>
 
-                <p class="description-text" style="width: 423px !important;">
+                <p class="description-text description-text--compact">
                   Our dog food provides superior nutrition and a patented probiotic for optimal nutrient absorption.
                 </p>
-              </div>
+              </li>
 
-              <div class="divider"></div>
+              <li class="divider"></li>
               
-              <div class="point" style="display: flex; justify-content: space-between; align-items: center;">
+              <li class="key-points__item">
                 <p class="percentage-text">92%</p>
 
-                <p class="description-text" style="width: 423px !important;">
+                <p class="description-text description-text--compact">
                   Our dog food's high protein and fat digestibility contribute to ideal stool quality.
                 </p>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
 
           <a href="#" class="button">
-            <span class="button-text">
+            <span class="button__text">
               Give your furry friend the gift of wholesome nutrition
             </span>
           </a>
         </div>
         
-        <img src="./images/image-624.png" alt="image-506" class="image" style="height: 570px !important">
+        <img src="./images/sitting.png" alt="Dog sitting" class="image image--tall">
       </div>
     </section>
     
-    <section class="section section-part" style="display: flex; align-items: center;">
-      <div class="container-1">
-        <img src="./images/image-506.gif" alt="image-506" class="image">
+    <section class="section section--flex">
+      <div class="container">
+        <img src="./images/eating.gif" alt="Dogs eating" class="image">
 
-        <div class="text-container" style="align-items: end;">
+        <div class="text-container text-container--end">
           <h2 class="title-text">
             Improve overall gastrointestinal health for better nutrient absorption
           </h2>
@@ -195,7 +208,7 @@
         </div>
       </div>
 
-      <div class="container-1">
+      <div class="container">
         <div class="text-container">
           <h2 class="title-text">
             Prebiotics nourish the beneficial gut bacteria, supporting digestive health
@@ -205,15 +218,15 @@
           </p>
         </div>
 
-        <img src="./images/image-321.jpg" alt="image-506" class="image">
+        <img src="./images/dog-food.jpg" alt="Dog food" class="image">
       </div>
     </section>
 
     <script>
       (function () {
-        const container = document.querySelector('.slider-container');
+        const container = document.querySelector('.slider');
         const revealDiv = container.querySelector('.reveal-div');
-        const sliderLine = container.querySelector('.slider-line');
+        const sliderLine = container.querySelector('.slider__line');
         let dragging = false;
       
         function setPosition(clientX) {
