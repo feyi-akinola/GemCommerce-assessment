@@ -208,52 +208,52 @@
         <img src="./images/image-321.jpg" alt="image-506" class="image">
       </div>
     </section>
+    
+    <script>
+      (function () {
+        const container = document.querySelector('.slider-container');
+        const revealDiv = container.querySelector('.reveal-div');
+        const sliderLine = container.querySelector('.slider-line');
+        let dragging = false;
+      
+        function setPosition(clientX) {
+          const rect = container.getBoundingClientRect();
+          let pct = (clientX - rect.left) / rect.width;
+          pct = Math.max(0, Math.min(1, pct));
+          const leftPct = pct * 100;
+          sliderLine.style.left = leftPct + '%';
+          revealDiv.style.left = leftPct + '%';
+        }
+      
+        // Only start drag from the slider handle
+        sliderLine.addEventListener('mousedown', e => {
+          dragging = true;
+          e.preventDefault();
+        });
+      
+        window.addEventListener('mousemove', e => {
+          if (!dragging) return;
+          setPosition(e.clientX);
+        });
+      
+        window.addEventListener('mouseup', () => {
+          dragging = false;
+        });
+      
+        // Touch support
+        sliderLine.addEventListener('touchstart', e => {
+          dragging = true;
+        }, { passive: true });
+      
+        window.addEventListener('touchmove', e => {
+          if (!dragging) return;
+          setPosition(e.touches[0].clientX);
+        }, { passive: true });
+      
+        window.addEventListener('touchend', () => {
+          dragging = false;
+        });
+      })();
+    </script>
   </body>
 </html>
-
-<script>
-  (function () {
-    const container = document.querySelector('.slider-container');
-    const revealDiv = container.querySelector('.reveal-div');
-    const sliderLine = container.querySelector('.slider-line');
-    let dragging = false;
-  
-    function setPosition(clientX) {
-      const rect = container.getBoundingClientRect();
-      let pct = (clientX - rect.left) / rect.width;
-      pct = Math.max(0, Math.min(1, pct));
-      const leftPct = pct * 100;
-      sliderLine.style.left = leftPct + '%';
-      revealDiv.style.left = leftPct + '%';
-    }
-  
-    // Only start drag from the slider handle
-    sliderLine.addEventListener('mousedown', e => {
-      dragging = true;
-      e.preventDefault();
-    });
-  
-    window.addEventListener('mousemove', e => {
-      if (!dragging) return;
-      setPosition(e.clientX);
-    });
-  
-    window.addEventListener('mouseup', () => {
-      dragging = false;
-    });
-  
-    // Touch support
-    sliderLine.addEventListener('touchstart', e => {
-      dragging = true;
-    }, { passive: true });
-  
-    window.addEventListener('touchmove', e => {
-      if (!dragging) return;
-      setPosition(e.touches[0].clientX);
-    }, { passive: true });
-  
-    window.addEventListener('touchend', () => {
-      dragging = false;
-    });
-  })();
-</script>
