@@ -26,6 +26,7 @@
   --radius-half: 50%;
   --radius-full: 9999px;
 
+  --space-xxs: 1px;
   --space-xs: 8px;
   --space-sm: 12px;
   --space-md: 16px;
@@ -312,6 +313,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: var(--space-xxs);
   transform: translate(-50%, -50%);
   width: 22px;
   height: 22px;
