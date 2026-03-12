@@ -11,6 +11,7 @@
   </head>
 
   <body>
+    <!-- Hero -->
     <section class="section">
       <div class="hero">
         <h1 class="title-text title-text--centered">
@@ -18,6 +19,7 @@
         </h1>
   
         <div class="hero__features">
+          <!-- Features: left column -->
           <div class="feature-group">
             <div class="feature">
               <div class="feature__icon feature__icon--green">
@@ -50,6 +52,7 @@
             </div>
           </div>
           
+          <!-- Before/after image slider -->
           <div class="slider">
             <img src="./images/raw.png" alt="Processed food" class="slider-image slider-image--block">
             
@@ -65,6 +68,7 @@
             </div>
           </div>
 
+          <!-- Features: right column -->
           <div class="feature-group">
             <div class="feature">
               <div class="feature__icon feature__icon--teal">
@@ -98,6 +102,7 @@
           </div>
         </div>
 
+        <!-- CTA + payment -->
         <div class="hero__cta">
           <a href="#" class="button">
             <span class="button__text">
@@ -137,6 +142,7 @@
       </div>
     </section>
     
+    <!-- Stats -->
     <section class="section section--muted section--flex">
       <div class="container container--wide">
         <div class="stats">
@@ -194,6 +200,7 @@
       </div>
     </section>
     
+    <!-- Content sections -->
     <section class="section section--flex">
       <div class="container">
         <img src="./images/eating.gif" alt="Dogs eating" class="image">
@@ -222,23 +229,27 @@
       </div>
     </section>
 
+    <!-- Before/after slider logic -->
     <script>
       (function () {
+        // Elements
         const container = document.querySelector('.slider');
         const revealDiv = container.querySelector('.reveal-div');
         const sliderLine = container.querySelector('.slider__line');
+        
         let dragging = false;
       
+        // Move the slider line and reveal div to the dragged position
         function setPosition(clientX) {
           const rect = container.getBoundingClientRect();
           let pct = (clientX - rect.left) / rect.width;
-          pct = Math.max(0, Math.min(1, pct));
+          pct = Math.max(0, Math.min(1, pct)); // clamp between 0 and 1
           const leftPct = pct * 100;
           sliderLine.style.left = leftPct + '%';
           revealDiv.style.left = leftPct + '%';
         }
       
-        // Only start drag from the slider handle
+        // Mouse events
         sliderLine.addEventListener('mousedown', e => {
           dragging = true;
           e.preventDefault();
@@ -253,7 +264,7 @@
           dragging = false;
         });
       
-        // Touch support
+        // Touch events (mobile devices)
         sliderLine.addEventListener('touchstart', e => {
           dragging = true;
         }, { passive: true });
